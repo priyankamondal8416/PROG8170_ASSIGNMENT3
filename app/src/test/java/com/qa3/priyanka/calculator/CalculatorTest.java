@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class CalculatorTest {
 
     //Member variable
-    Calculator c;
+    private Calculator c;
 
     @Before
     public void setUp() throws Exception {
@@ -412,6 +412,65 @@ public class CalculatorTest {
 
         // 3. Assert
         assertEquals(-7.0, result,0);
+    }
+
+    // TEST MUTANT METHODS
+
+    @Test
+    // Test Identifier: 5.1
+    // Test Description: Dividing 1 by 1
+    // Method of Execution: Automated
+    // Input Data: 1,1
+    // Expected Output: 0
+
+    public void testDivision_1And1_output0() throws Exception {
+        // 1. Arrange
+        double i = 1;
+        double j = 1;
+
+        // 2. Act
+        double result = c.division(i, j);
+
+        // 3. Assert
+        assertEquals(1, result,0);
+    }
+
+    @Test
+    // Test Identifier: 5.2
+    // Test Description: Dividing 2 by 1
+    // Method of Execution: Automated
+    // Input Data: 2,1
+    // Expected Output: 2
+
+    public void testDivision_2And1_output2() throws Exception {
+        // 1. Arrange
+        double i = 2;
+        double j = 1;
+
+        // 2. Act
+        double result = c.division(i, j);
+
+        // 3. Assert
+        assertEquals(2, result,0);
+    }
+
+    @Test
+    // Test Identifier: 5.2
+    // Test Description: Dividing 9 by 3
+    // Method of Execution: Automated
+    // Input Data: 9,3
+    // Expected Output: 3
+
+    public void testDivision_9And3_output3() throws Exception {
+        // 1. Arrange
+        double i = 9;
+        double j = 3;
+
+        // 2. Act
+        double result = c.division(i, j);
+
+        // 3. Assert
+        assertEquals(3, result,0);
     }
 
 }
