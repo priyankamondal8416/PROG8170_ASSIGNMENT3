@@ -12,6 +12,6 @@ public class  Calculator {
         return (valueOne * valueTwo);
     }
     public double division(double valueOne, double valueTwo){
-        return (valueOne * valueTwo);
+        return (valueOne / valueTwo);
     }
 }
